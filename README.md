@@ -1,0 +1,4 @@
+zad-rek
+=======
+
+zadanie rekrutacyjne
