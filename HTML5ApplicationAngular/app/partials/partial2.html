@@ -1,0 +1,36 @@
+<div ng-controller="Exercise2" style="text-align: center;">
+    <header>
+        <h1>Exercise 3 Vocabulary</h1>
+        <h2>Label the weather symbols.</h2>
+    </header>
+    <div class="exercise-content" style="padding: 20px 84px;">
+        <div ng-repeat="item in inputValues" class="exercise-item">
+            <img src="{{ item.src }}"  >
+            <div class="exercise-item-example" ng-show="item.example">
+                <div class="exercise-item-example-label">Example:</div>
+                <div>
+                    <label>{{ item.id }}</label>
+                    <input ng-value="item.ans" disabled="disabled" >
+                </div>
+            </div>
+            <div ng-show="!item.example">
+                <div class="exercise-item-input">
+                    <label>{{ item.id }}</label>
+                    <input ng-model="item.val" type="text">
+                    <span ng-style='opacity'>
+                        <img src='img/wrong.png' alt="correct" title="correct" ng-show="item.correct">
+                        <img src='img/correct.png' alt="wrong" title="wrong" ng-show="!item.correct">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="exercise-avalible-items">
+            <span ng-repeat="x in wordList">{{ x.text }}</span>
+        </div>
+    </div>
+    <div class="exercice-check" style="float: right; position: relative;">
+        <div ng-click="checkValues()" ng-style="tick" style="position: absolute; bottom: 0; right: 0;"></div>
+    </div>
+    <div class="clear"></div>
+</div>

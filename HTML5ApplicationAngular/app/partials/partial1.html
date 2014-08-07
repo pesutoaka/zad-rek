@@ -1,0 +1,29 @@
+<div ng-controller="Exercise1">
+    <header>
+        <h1>Exercise 3 Vocabulary</h1>
+        <h2>What school activities do you see on the picture?</h2>
+    </header>
+    <div class="exercise-content" style="padding: 45px 234px;">
+        <div ng-repeat="item in images" class="exercise-image-element" style="width: 165px; height: 111px;">
+            <div ng-style="item.rotation">
+                <span class="exercise-image-number">{{ item.id }}</span>
+                <img src="{{ item.src }}" alt="{{ item.title }}" title="{{ item.title }}">
+            </div>
+        </div>
+        <div class="clear"></div>
+        
+    </div>
+    <div class="exercise-answears">
+        <div class="exercise-answears-input-style-1" ng-repeat="x in inputValues">
+            <span ng-style='opacity'>
+                <img src='img/wrong.png' alt="correct" title="correct" ng-show="x.correct">
+                <img src='img/correct.png' alt="wrong" title="wrong" ng-show="!x.correct">
+            </span>
+                <input ng-style='switchBack' ng-change="changeVal()" ng-model="x.val" name="{{ x.id }}" type="number" min="1" step="1" pattern="\d+"><label>{{ x.text }}</label>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="exercice-check">
+        <div ng-click="checkValues()" ng-style="tick"></div>
+    </div>
+</div>

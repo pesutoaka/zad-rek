@@ -1,0 +1,338 @@
+/* app css stylesheet */
+
+.animation.ng-enter,
+.animation.ng-leave{
+  transition-property: all;
+  transition-duration: .5s;
+}
+
+.animation.ng-enter {
+  display: block;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition:opacity .5s .5s, display .5s .5s, height 0s .5s, overflow 0s .5s;
+}
+
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+  position: initial;
+  height: auto;
+  overflow: visible;
+}
+
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/** end of angular **/
+*{
+    font-family: sans-serif;
+}
+
+html{
+    text-align: center;
+}
+
+body{
+    width: 969px;
+    margin: 2px auto 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+.exercise-panel{
+    background-color: #f5f5f5;
+    text-align: left;
+}
+
+.exercise-panel h1,
+.exercise-panel h2{
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+.exercise-panel h2{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+}
+
+.exercise-panel h1{
+    color: #4654AB;
+    font-size: 24px;
+    margin:0 0 5px 0;
+}
+
+.exercise-panel header{
+    margin-left: 18px;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.exercise-panel .exercise-content{
+    padding: 10px 150px;
+}
+
+.exercise-image-element{
+    float: left;
+}
+.exercise-image-element div{
+    border: 5px solid #f6f5f5;
+    box-shadow: 0 0 3px rgba(0,0,0,.7);
+    position: relative;
+    background-color: #f6f5f5;
+}
+
+.exercise-image-element img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.exercise-image-element .exercise-image-number{
+    position: absolute;
+    padding: 2px 5px;
+    background-color: #f6f5f5;
+    top: -5px;
+    left: -5px;
+}
+
+.exercise-answears{
+    padding: 0 80px;
+    display: inline-block;
+}
+.exercise-answears div{
+    float: left;
+}
+.exercise-answears input{
+    
+}
+.exercise-answears-input-style-1 input{
+    width: 30px;
+    margin: 5px;
+    border:1px solid #cbcaca;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+    text-align: center;
+    transition: background-color .4s;
+}
+.exercise-answears-input-style-1{
+    width: 33%;
+    position: relative;
+}
+
+.exercice-check{
+    text-align: right;
+}
+.exercice-check div{
+    display: inline-block;
+    cursor: pointer;
+    background-color: #2f9ec8;
+    border-radius: 30px;
+    width: 40px;
+    height:40px;
+    margin: 0 20px 15px 0;
+    background: url('../img/tick_white.png') no-repeat center center #2f9ec8;
+}
+.exercise-answears-input-style-1 span{
+    position: absolute;
+    right: 100%;
+    top:10px;
+    transition: opacity .4s;
+    opacity: 0;
+}
+
+.exercise-item{
+    float: left;
+    display: inline-block;
+    height: 206px;
+    width: 266px;
+    text-align: center;
+}
+
+.exercise-item > div{
+    padding:5px;
+    width: 180px;
+    display: inline-block;
+    text-align: left;
+}
+
+.exercise-item lavel,
+.exercise-item div {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.exercise-item input{
+    margin: 5px 18px;
+    width: 100px;
+    padding: 2px 5px;
+}
+
+.exercise-item-example{
+    border:1px solid #ccd9e1;
+    background-color: #e6eaee;
+}
+
+.exercise-item-input{
+    margin-top: 12px;
+    position: relative;
+}
+
+.exercise-item-input span{
+    position: absolute;
+    left: 148px;
+    top: 7px;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.exercise-avalible-items{
+    margin: auto 50px;
+    border: 1px solid #cad7e0;
+    padding: 10px 80px;
+    background-color: #e6eaee;
+}
+.exercise-avalible-items span{
+    font-size: 12px;
+    color: #141313;
+    margin: 0 10px;
+}
+
+nav *{
+    transition: all .35s;
+}
+
+nav{
+    padding:50px 0 20px 0;
+    height: 3px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    background: url('../img/back00.gif') repeat-x 0 50px;
+    position: relative;
+}
+
+nav > div{
+    width: 100%;
+    display: block;
+}
+
+.menu-item,
+.menu-branch,
+.menu-leaf{
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item{
+    border:3px solid #2f9ec8;
+    border-radius: 30px;
+    background-color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    color: #2f9ec8;
+}
+
+.menu-branch > .menu-item{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    position: absolute;
+    left: -14px;
+    top: -16px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.menu-leaf > .menu-item{
+    width: 1px;
+    height: 1px;
+    padding: 4px;
+    position: absolute;
+    left: -4px;
+    top: -7px;
+}
+
+.menu-item{
+}
+
+.menu-leaf{
+    /* left: 100%; */
+    /* float: right !important; */
+    /* right: -100%; */
+}
+
+.menu-leaf,
+.menu-branch{
+    background-color: #2f9ec8;
+    height: 1px;
+    border: 1px solid #2f9ec8;
+    width: 62px;
+    float: left;
+}
+
+.active *{
+    border-color: #4554ab !important;
+    color: #4554ab;
+}
+
+.menu-branch.active,
+.active .menu-branch,
+.active .menu-leaf,
+.menu-leaf .menu-item.active {
+    background-color: #4554ab;
+    
+}
+
+.menu-item.active {
+    
+}
+
+[class^="menu-nav-"] {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #4554ab;
+    border-radius: 30px;
+    top:33px;
+    position: relative;
+    cursor: pointer;
+}
+.menu-nav-left{
+    background: url('../img/arrow_left_white.png') no-repeat 9px center #4554ab;
+}
+.menu-nav-right{
+    background: url('../img/arrow_right_white.png') no-repeat 14px center #4554ab;
+}
+
+.menu-nav-buttons div.disabled{
+    background-color: #2f9ec8;
+    cursor: default;
+}
+.menu-nav-buttons{
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 90px;
+    padding-left: 90px;
+    width: 100px;
+    background: url('../img/back00.gif') repeat-x 0 50px #fff;
+}
+
+.menu-marker{
+    position: absolute;
+    width: 16px;
+    height: 21px;
+    background: url('../img/marker.png') no-repeat center;
+    left:50%;
+    top:8px;
+    z-index: 1;
+}
