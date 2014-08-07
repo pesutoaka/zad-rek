@@ -13,7 +13,7 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/exercise-3-part-2', {templateUrl: 'partials/partial1.html', controller: 'Exercise1'});
   $routeProvider.when('/exercise-3-part-1', {templateUrl: 'partials/partial2.html', controller: 'Exercise2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/exercise-3-part-1'});
 }])
 .factory('ExerciceOneValues',function(){
       var factory = {};
